@@ -1,0 +1,19 @@
+import org.junit.Assert;
+import org.junit.Test;
+
+
+public class BotTest {
+    @Test
+    public void testStart(){
+        Bot cbot = new Bot();
+        String correctAnswer = "Кто грызёт на ветке шишку? Ну, конечно, это...";
+        Assert.assertEquals(cbot.sayInReturn("!start"), correctAnswer);
+    }
+
+    @Test
+    public void testHelp(){
+        Bot cbot = new Bot();
+        String correctAnswer = "";
+        Assert.assertEquals(cbot.sayInReturn("!help"), correctAnswer);
+    }
+}
